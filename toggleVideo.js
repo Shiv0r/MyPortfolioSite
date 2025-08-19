@@ -45,8 +45,8 @@ getProjectsEl.addEventListener('click', (btn) =>
     }
 
     //button logic hide/show video
-    const btnHairShaderEl = document.getElementById('btn-hair-shader')
-    const btnAnimeShaderEl = document.getElementById('btn-anime-shader')
+    const btnHairShaderEl = document.getElementById('btn-hair-shader');
+    const btnAnimeShaderEl = document.getElementById('btn-anime-shader');
     const videoHairShader = document.getElementById('video-hair-shader');
     const videoAnimeShader = document.getElementById('video-anime-shader');
 
