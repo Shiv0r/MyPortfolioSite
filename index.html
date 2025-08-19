@@ -9,18 +9,21 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="./toggleVideo.js" defer></script>
         <title>Edward Agwi</title>
     </head>
 
 
     <body>
         <header>
-            <h1>Edward Agwi - Frontend Developer</h1>
+            <h1>Edward Agwi <span>- Frontend Developer</span></h1>
             <nav>
                 <ul>
                     <li><a href="#">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="">Contacts</a></li>
+                    <li><a href="./contact.html#contact">Contacts</a></li>
+                    <li><a href="./contact.html#impressum">Impressum</a></li>
                 </ul>
             </nav>
         </header>
@@ -41,28 +44,33 @@
                 </article>
             </section>
 
-            <section id="ue5-videos">
+            <section id="projects">
                 <h2>Projects</h2>
 
-                <figure id="video-hair-shader">
-                    <button>Hair Shader</button>
-                    <video controls loop width="1000">
-                        <source src="./ressources/video/HairShader_Demo_MI.mp4">
-                    </video>
-                </figure>
-                
-                <figure id="video-anime-shader">
-                    <button>Shader</button>
-                    <video controls loop width="1000">
-                        <source src="./ressources/video/WIP_AnimeShader.mp4">
-                    </video>
-                </figure>
+                <div id="btn-video">
+                    <button id="btn-hair-shader">Hair Shader</button>
+                    <button id="btn-anime-shader">Anime Shader</button>
+                </div>
+                <div id="flex-video">
+                    <figure id="video-hair-shader" class="is-hidden">
+                        <video controls loop width="1000">
+                            <source src="./ressources/video/HairShader_Demo_MI.mp4">
+                        </video>
+                    </figure>
+                    
+                    <figure id="video-anime-shader" class="is-hidden">
+                        <video controls loop width="1000">
+                            <source src="./ressources/video/WIP_AnimeShader.mp4">
+                        </video>
+                    </figure>
+                </div>
 
             </section>
 
         </main>
 
         <footer id="skills">
+            <h2>Skills</h2>
             <figure>
                 <ul>
                     <li><img src="./ressources/svg/html5-logo.svg" width="50" alt="html5 logo"></li>
