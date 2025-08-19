@@ -28,20 +28,20 @@ getProjectsEl.addEventListener('click', (btn) =>
 
     //deselect all buttons
     const toggleCollection = document.querySelectorAll('.is-toggled');
-    const alreadySelected = btn.target.classList.contains('is-toggled');
+    const isAlreadySelected = btn.target.classList.contains('is-toggled');
     const videoHairShader = document.getElementById('video-hair-shader');
     const videoAnimeShader = document.getElementById('video-anime-shader');
 
     toggleCollection.forEach(toggleElement =>
     {
         const isToggleHTMLElement = toggleElement instanceof HTMLButtonElement
-        if(!isToggleHTMLElement && alreadySelected) return;
+        if(!isToggleHTMLElement && isAlreadySelected) return;
 
         toggleElement.classList.remove('is-toggled');
     });
 
     //toggle button logic
-    if(!alreadySelected)
+    if(!isAlreadySelected)
     {
         btn.target.classList.add('is-toggled');
     }
@@ -61,12 +61,9 @@ getProjectsEl.addEventListener('click', (btn) =>
         showVideo(videoAnimeShader);
     }
 
-    toggleCollection.forEach(toggleElement =>
+    if(isAlreadySelected)
     {
-        const isToggleHTMLElement = toggleElement instanceof HTMLButtonElement
-        if(isToggleHTMLElement && !alreadySelected) return;
-
         hideVideo(videoHairShader);
         hideVideo(videoAnimeShader);
-    });
+    }
 });
